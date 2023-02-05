@@ -23,7 +23,10 @@ public class Csc340WilliamHarperAssn2Application {
             String jSonFact = restTemplate.getForObject(url, String.class);
             JsonNode root = mapper.readTree(jSonFact);
             
-            
+            /**This is a simple program that calls the cat facts API
+             * and prints a random cat fact provided by the API.
+             */
+          
             System.out.println("Want to learn a cool cat fact?");
             System.out.println("Fact: " + root.findValue("data"));
             System.out.println("Aren't cats amazing?\n\n");
